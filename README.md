@@ -2,6 +2,7 @@
 
 1D settings
 
+run with GUI:
 click GUI_test.m to start GUI
 enter/choose parameters, then click run
 
