@@ -3,19 +3,20 @@ global stop;
 % system param
 color = ['b','g','m','c','y',[0.2417,0.4039,0.0965],[0.1320,0.9421,0.9561]];
 
-s_init = handles.s_init;
-tar = handles.tarPos;
-u_init = handles.u_init;
-MSpace = handles.MSpace;
-A = handles.A;
-B = handles.B;
-if handles.cooperation  == 1
+s_init = str2num(handles.sInit.String);
+tar = str2num(handles.tarPos.String); 
+u_init = str2num(handles.uInit.String);
+MSpace = str2num(handles.MSpace.String);
+A = str2double(handles.A_Val.String);
+B = str2double(handles.B_Val.String);
+
+if handles.Cooperation.Value
     event = [1,1,1]; % event function indicator
 else
     event = [0,0,0]; % event function indicator
 end
 
-if handles.shortTerm  == 1
+if handles.ShortTerm.Value
     shortTerm = 1; % short term decision indicator
 else
     shortTerm = 0; 
@@ -34,7 +35,7 @@ A0= zeros(1,L+1);A0(tar+1) = A;
 R0=zeros(1,L+1);R0(tar+1) = 1;
 
 % agent param
-rs= handles.rs;
+rs= str2double(handles.SensingRange.String);
 rc = 2*rs;
 ri = 3*rs;
 % boundary
@@ -105,21 +106,20 @@ for tCnt = t
         end
         
                 
-        if handles.V_est1Show == 1
+        if handles.V_est1.Value == 1
             bar(V_est(1,2:end),color(1));
         end
-        if handles.V_estNShow == 1
+        
+        if handles.V_estN.Value == 1
             bar(V_est(agnNum,2:end),color(2));
         end
-%         if handles.V_est3Show == 1
-%             bar(V_est(3,2:end),color(3));
-%         end
 
         
-        if handles.VShow == 1
+        if handles.V.Value == 1
             bar(V(2:end),'k');
         end
-        if handles.RShow == 1
+        
+        if handles.R.Value == 1
             bar(R(2:end),'r');
         end
         
