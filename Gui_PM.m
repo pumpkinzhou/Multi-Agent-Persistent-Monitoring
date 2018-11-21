@@ -96,8 +96,7 @@ for tCnt = t
     % visualize V
     if mod(tCnt,1) == 0
         
-        cla;
-                
+        cla;  
         hold on;
         for j = 1: numel(s)
             plot(s(j),0, strcat('.',color(j)),'MarkerSize',69);

@@ -24,9 +24,3 @@ function u = gradientDescent(s,tar,V_est,omega)
 for  j = 1 : numel(s)
     u(j) = -sign(sum(V_est(j,:).*sign(s(j)-omega)./(abs(s(j)-omega)+1)) );
 end
-
-%     if agnNum == 3
-%         u1 = -sign(sum(abs(s3-omega).*abs(s2-omega).*V.*sign(s1-omega)));
-%         u2 = -sign(sum(abs(s3-omega).*abs(s1-omega).*V.*sign(s2-omega)));
-%         u3 = -sign(sum(abs(s1-omega).*abs(s2-omega).*V.*sign(s3-omega)));
-%     end
