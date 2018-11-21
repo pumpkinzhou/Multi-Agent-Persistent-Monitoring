@@ -11,7 +11,9 @@ enter/choose parameters, then click run
 
 ## run without GUI:
 click main_decentrailized_continous_density.m
+
 ![screenshotNOGUI](https://github.com/pumpkinzhou/Multi-Agent-Persistent-Monitoring-Tasks/blob/master/results/run_without_GUI.PNG)
+
 
 ## Agent trajectories:
 ![screenshotAgentTraj](https://github.com/pumpkinzhou/Multi-Agent-Persistent-Monitoring-Tasks/blob/master/results/agent_trajectories.PNG)
