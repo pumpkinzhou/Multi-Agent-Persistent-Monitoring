@@ -1,4 +1,5 @@
 function TrajectoryGeneral_Theta_W(theta,W1,s_init,u_init,T,L,color)
+% this function is originally contributed by Xuchao Lin
 
 tt = 0;
 s1 = s_init;
