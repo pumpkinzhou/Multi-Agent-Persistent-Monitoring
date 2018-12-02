@@ -1,4 +1,4 @@
-# Multi-Agent Persistent Monitoring App
+# Multi-Agent Active Sensing App
 
 1D settings
 
